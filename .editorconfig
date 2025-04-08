@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# IDE0022: Use block body for method
+csharp_style_expression_bodied_methods = false
+
+# IDE0023: Use block body for conversion operator
+csharp_style_expression_bodied_operators = false
+
+# IDE0046: Convert to conditional expression
+dotnet_style_prefer_conditional_expression_over_return = false
