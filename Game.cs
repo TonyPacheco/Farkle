@@ -18,7 +18,8 @@ public class Game
 
     public void Play()
     {
-        while(_player1Score < _targetScore && _player2Score < _targetScore)
+        while((_player1Score < _targetScore && _player2Score < _targetScore)
+            || (_player1Score == _player2Score && _player1Score >= _targetScore)) //need to break ties
         {
             PrintState();
             CurrentPlayer = 1;
