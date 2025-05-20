@@ -18,8 +18,7 @@ public class Game
 
     public void Play()
     {
-        while((_player1Score < _targetScore && _player2Score < _targetScore)
-            || (_player1Score == _player2Score && _player1Score >= _targetScore)) //need to break ties
+        while(NeitherPlayerHasTargetScore() || PlayersNeedTieBreak())
         {
             PrintState();
             CurrentPlayer = 1;
@@ -34,6 +33,9 @@ public class Game
         PrintState();
         Console.WriteLine($"PLAYER {(_player1Score > _player2Score ? "1" : "2")} WINS!!");
     }
+
+    public bool NeitherPlayerHasTargetScore() => _player1Score < _targetScore && _player2Score < _targetScore;
+    public bool PlayersNeedTieBreak() => _player1Score == _player2Score && _player1Score >= _targetScore;
 
     public void PrintState() => Console.WriteLine($"P1: {_player1Score}\tP2: {_player2Score}\tTarget: {_targetScore}");
 }
