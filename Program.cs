@@ -1,5 +1,6 @@
 ﻿using Farkle;
 
+Console.Clear();
 Console.WriteLine("FARKLE");
 Console.WriteLine("Target score?");
 var target = 0;
