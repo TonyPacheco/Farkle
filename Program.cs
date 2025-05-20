@@ -10,6 +10,14 @@ while(target == 0)
 }
 Console.Clear();
 
-new Game(target).Play();
+Console.WriteLine("Player 1 name?");
+var player1 = new Player(1, Console.ReadLine());
+Console.Clear();
+
+Console.WriteLine("Player 2 name?");
+var player2 = new Player(2, Console.ReadLine());
+Console.Clear();
+
+new Game(player1, player2, target).Play();
 
 Console.ReadLine();

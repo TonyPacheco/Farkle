@@ -1,14 +1,13 @@
 ﻿namespace Farkle;
 
-public class Turn
+public class Turn(Player player)
 {
     public int RunningScore = 0;
-
     public Hand MyHand = new();
-    
+
     public int Take()
     {
-        Console.WriteLine($"PLAYER {Game.Instance.CurrentPlayer} PRESS ENTER TO ROLL");
+        Console.WriteLine($"{player.Name} PRESS ENTER TO ROLL");
         Console.ReadLine();
         Console.Clear();
 
