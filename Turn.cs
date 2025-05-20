@@ -46,7 +46,7 @@ public class Turn(Player player)
                     AlertForInvalidInput();
                     continue;
                 }
-                //Technically I need to check if the player held any non-scoring dice and disallow that... oh well, task for later
+                
                 RunningScore += MyHand.EvaluateHeldScore();
                 foreach(var die in MyHand.Dice)
                 {
