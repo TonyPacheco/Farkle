@@ -28,7 +28,7 @@ public class Game
 
         Console.Clear();
         PrintState();
-        Console.WriteLine($"PLAYER {(_player1.Score > _player2.Score ? _player1.Name : _player2.Name)} WINS!!");
+        Console.WriteLine($"{(_player1.Score > _player2.Score ? _player1.Name : _player2.Name)} WINS!!");
     }
 
     public bool NeitherPlayerHasTargetScore() => _player1.Score < _targetScore && _player2.Score < _targetScore;
