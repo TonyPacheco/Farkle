@@ -121,7 +121,7 @@ public class Turn(Player player)
         {
             foreach(var die in unlockedDice)
             {
-                Console.Write($"{die}");
+                Console.Write(die);
             }
         }
         if(diceByLockState.TryGetValue(true, out var lockedDice))
@@ -130,7 +130,7 @@ public class Turn(Player player)
             Console.Write("          ");
             foreach(var die in lockedDice)
             {
-                Console.Write($"<{die.Face}>");
+                Console.Write(die);
             }
         }
         Console.WriteLine();

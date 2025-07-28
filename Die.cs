@@ -22,8 +22,7 @@ public class Die
         var (left, right) = State switch
         {
             DieState.Open => ("[", "]"),
-            DieState.Held => ("<", ">"),
-            DieState.Locked => ("_", "_"),
+            DieState.Held or DieState.Locked  => ("<", ">"),
             _ => throw new NotImplementedException()
         };
         return $"{left}{Face}{right}";
